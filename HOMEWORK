@@ -1,0 +1,211 @@
+function checkTemp() {
+    let temp = Math.floor(Math.random() *60);
+
+    if (temp < 21) {
+        console.log ("liiga külm")
+    }
+
+    else if (temp < 20 && temp > 41) {
+        console.log ("temperatuur on paras")
+    }
+
+    else if (temp > 40) {
+        console.log ("liiga kuum")
+    }
+}
+                                 
+// checkTemp() , kontrollimis kommand // 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+const data = ["FWmcfgAWxe","KnFJXGcACq","cCYApSPiX0","iHwbq2giBx","X5Ebl6sjLf","Rxc2oFCgI4","jFtFONF7NK","b8iIhVOJl6","aGlxlytbic","30e8YSgLzd","0oj65bHiHZ","NtykZPC0DH","qgj6THRgT0","rFM7G7SJbB","lcu5UKrj7w","xurxryxn5u","7XDXFJ8Axh","RuQU6EeJyi","go3SD5CYYT","c8sOoXTa59","Vh0QfTkdKk","rrYBTg4sWc","CmeWiA73ig","iM8MD2IXle","SQk4WlTLiE","wn3JhYo93i","Hlh1Amt1jo","Rd6hiOekcE","LMKIBsBBmQ","nb72pL5LKQ","8GufbXPMRb","OO5OnLzsdP","hLddf4izXl","6x8suntNs6","8VATvVOQZR","jxL8zSOcZN","87YqnuB6Mc","sqr1WbVsWv","fLC17MbW59","tJ6Z5r6mDd","iiEffxACk7","C6w4k9AS2N","9rQTNM8xmG","x4JQLDr6hd","3bYXSm7Zgo","phTYCmMxOW","isl31Fd0SN","CZItvlfdqW"];
+
+for (let x=1; x <= 100; x++){
+    console.log(x)
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+function checkTemp() {
+    let temp = Math.floor(Math.random() * 60);     //C°
+    let tempkülm = 0 
+    let tempparas = 21
+    let tempkuum = 41
+    if (temp>tempkuum) {
+        alert ("Temperatuur on liiga kuum, Temperatuur on " +temp +" C°")
+    }
+    else if (temp>tempparas) {
+        alert ("Temperatuur on paras, Temperatuur on " +temp +" C°")
+    }
+    else if (temp>tempkülm) {
+        alert ("Temperatuur on liiga külm, Temperatuur on " +temp +" C°")
+    }
+
+}
+
+
+function checkTemp() {
+    let temp = Math.floor(Math.random() * 60);
+
+    if (temp > 0){
+        console.log("Temperatuur on liiga külm")
+    } else if (temp > 20 && temp <= 40) {
+        console.log("Temperatuur on paras")
+    } else if (temp > 41 && temp <= 60) {
+        console.log("Temperatuur on liiga kuum")
+    }
+
+}
+
+function checkTemp() {
+    let temp = 5;
+
+    if (temp > 0){
+        console.log("Temperatuur on liiga külm")
+    } else if (temp > 20 && temp <= 40) {
+        console.log("Temperatuur on paras")
+    } else if (temp > 41 && temp <= 60) {
+        console.log("Temperatuur on liiga kuum")
+    }
+
+}
+
+function checkTemp(temp) {
+    console.log("Temp on "+temp)
+    if (temp < 0) {
+        console.log("Liiga külm")
+    } else if (temp > 20 && temp <= 40) {
+
+    } else {
+
+    } 
+
+}
+
+
+
+
+
+
+function summa(a,b) {
+    return a+b
+}
+let vastus = summa(2,7)
+
+let kasKütta = checkTemp(44)
+if (kasKütta === true) {
+    Ahi.küta
+}
+
+function kasKütta(temp) {
+    return temp < 20
+}
+
+function kasJahutada(temp) {
+    return temp > 40
+}
+
+
+
+return temp < 20 ? temp <= 40 ? true: false: false
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// string number boolean object  (tüüp type)
+
+// ctrl + K   ctrl + C    comment
+// ctrl + K   ctrl + U  uncomment
+
+if else conditiondal
+
+// Object on tüüp mis salvestab key-value paare.
+// key: value
+
+
+let töötaja = {nimi: "Timo", palk: 10}
+let töötaja2 = {
+    nimi: "Timo",
+    palk: 10,
+    rahakott: 0,
+    maksaPalka: function () {
+        this.rahakott += this.palk
+    },
+    muuda: 5,
+
+}
+
+
+
+let töötaja3 = {
+    nimi: "Kalle",
+    palk: 15
+    rahakott: 5,
+    maksaPalka: function () {
+        rahakott += palk
+    }
+}
+
+
+
+console.log(töötaja2.nimi)
+console.log(töötaja2.rahakott)
+
+
+töötaja2.maksaPalka()
+
+
+töötaja2.muuda += 5
+töötaja2["palk"] += 5
+
+
+// skoop scope
+
+
+
+let rahakott = 10;
+let tootehind = 5;
+if (rahakott >= tooteHind) {
+    let rahakott = 30;
+    let rahakott = rahakott - tooteHind
+    rahakott += 10
+}
+console.log(rahakott)
+
+function summa() {
+    console.log(7+5)
+}
+
+
+let summa = function () {
+
+}
+
+
+typeof on muutuja, mis näitab mis tüüpi seal sees on.
+
+
+
+typeof, vaheldumisi ka typeOf ja TypeOf on operaator, mida pakuvad mitmed programmeerimiskeeled muutuja andmetüübi määramiseks.
+
+
+
+
+function checkTamp() {
+    let temp = 5;
+}
+
+
+// primitive types: 
+// number string boolean object function undefined
+// user defined types:
+// Math 
+
+
+Katlal on kolm temperatuurivahemikku 
+0-20 on liiga külm
+21-40 on  paras temperatuur 
+41-60 on liiga kuum
+
+17.09.2021
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                
