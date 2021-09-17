@@ -1,0 +1,41 @@
+Taaniel Ormak
+
+HTML consle
+
+6-3 - Konsoolis saad matemaatikat teha. 3
+
+nimi= 123 123
+
+nimi = 'test' test
+
+havepower = true true
+
+4+7 11
+
+4 = 7 - Võrdlemine UNEXPECTED ERROR - Valesti tehtud
+
+4 == 7 false - Õigesti tehtud
+
+4 > 2 - Õigesti tehtud true
+
+3 > 9 - Õigesti tehtud false
+
+<numbrid, strings, boolean>
+
+html simple script
+
+tooteHind = 16 rahaKott = 420
+
+if (rahaKott < tooteHind){ console.log ("Ei ole ostetud") } else "Ostetud" EI Ole OSTETUD - Vastus
+
+if (rahaKott > tooteHind){ console.log ("Ei ole ostetud") } else "Ostetud" OSTETUD - Vastus
+
+full version
+
+rahaKott = 12 12 tooteHind = 4 4
+
+rahakott = Math.random()*50; tooteHind = 12; if (rahaKott >= tooteHind) console.log("Ostetud"); else console.log("Ei Ole Ostetud");
+
+03.09.2021
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
