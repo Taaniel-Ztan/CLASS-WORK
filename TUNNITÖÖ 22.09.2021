@@ -96,3 +96,5 @@ ALTER TABLE
     `Test` ADD CONSTRAINT `test_player_id_foreign` FOREIGN KEY(`player_id`) REFERENCES `Player`(`id`);
 ALTER TABLE
     `Attendance` ADD CONSTRAINT `attendance_training_id_foreign` FOREIGN KEY(`training_id`) REFERENCES `Player`(`id`);
+    
+    https://drawsql.app/daniels-photography/diagrams/fc-timps#
