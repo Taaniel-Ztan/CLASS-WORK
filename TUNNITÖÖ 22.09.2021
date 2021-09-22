@@ -1,0 +1,98 @@
+FC-TIMPS
+
+3-Gruppi vaja
+Kes käib trennis ja kes puudub?
+Laste vanemate andmed.
+Kes kõige parem jalgpallis ehk statistika..Et näha kes kõige parem ja kes kõige nõrgem mingis alas ja leida kes on parem ründaja ja kaitsja.
+Näha kelle vanematel on trenni-arve makstud..
+
+SQL EXPORTED VERSION via VISUAL STUDIO CODE
+
+CREATE TABLE `Groups`(
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `name` INT NOT NULL
+);
+ALTER TABLE
+    `Groups` ADD PRIMARY KEY `groups_id_primary`(`id`);
+CREATE TABLE `Parent`(
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `first_name` INT NOT NULL,
+    `last_name` INT NOT NULL,
+    `phone` INT NOT NULL,
+    `email` INT NOT NULL
+);
+ALTER TABLE
+    `Parent` ADD PRIMARY KEY `parent_id_primary`(`id`);
+CREATE TABLE `Player`(
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `name` INT NOT NULL,
+    `user_id` INT NULL COMMENT 'ISIKUKOOD EHK PIN (personal idenfication number)',
+    `number` INT NOT NULL,
+    `parent_id` INT NOT NULL,
+    `payment` INT NOT NULL,
+    `group_id` INT NOT NULL
+);
+ALTER TABLE
+    `Player` ADD PRIMARY KEY `player_id_primary`(`id`);
+CREATE TABLE `Contact`(
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `parent_id` INT NOT NULL,
+    `contact_type_id` INT NOT NULL,
+    `value` INT NOT NULL
+);
+ALTER TABLE
+    `Contact` ADD PRIMARY KEY `contact_id_primary`(`id`);
+CREATE TABLE `ContactType`(
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `value` INT NOT NULL
+);
+ALTER TABLE
+    `ContactType` ADD PRIMARY KEY `contacttype_id_primary`(`id`);
+CREATE TABLE `Payment`(
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `player_id` INT NOT NULL,
+    `amount` INT NOT NULL,
+    `date` INT NOT NULL
+);
+ALTER TABLE
+    `Payment` ADD PRIMARY KEY `payment_id_primary`(`id`);
+CREATE TABLE `Training`(
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `date` DATETIME NOT NULL,
+    `description` INT NOT NULL
+);
+ALTER TABLE
+    `Training` ADD PRIMARY KEY `training_id_primary`(`id`);
+CREATE TABLE `Attendance`(
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `player_id` INT NOT NULL,
+    `training_id` INT NOT NULL
+);
+ALTER TABLE
+    `Attendance` ADD PRIMARY KEY `attendance_id_primary`(`id`);
+CREATE TABLE `Test`(
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `date` INT NOT NULL,
+    `player_id` INT NOT NULL,
+    `score` INT NOT NULL,
+    `test_type` INT NOT NULL,
+    `description` INT NOT NULL
+);
+ALTER TABLE
+    `Test` ADD PRIMARY KEY `test_id_primary`(`id`);
+ALTER TABLE
+    `Player` ADD CONSTRAINT `player_parent_id_foreign` FOREIGN KEY(`parent_id`) REFERENCES `Parent`(`id`);
+ALTER TABLE
+    `Contact` ADD CONSTRAINT `contact_parent_id_foreign` FOREIGN KEY(`parent_id`) REFERENCES `Parent`(`id`);
+ALTER TABLE
+    `Payment` ADD CONSTRAINT `payment_player_id_foreign` FOREIGN KEY(`player_id`) REFERENCES `Player`(`id`);
+ALTER TABLE
+    `Player` ADD CONSTRAINT `player_group_id_foreign` FOREIGN KEY(`group_id`) REFERENCES `Groups`(`id`);
+ALTER TABLE
+    `Contact` ADD CONSTRAINT `contact_parent_id_foreign` FOREIGN KEY(`parent_id`) REFERENCES `ContactType`(`id`);
+ALTER TABLE
+    `Attendance` ADD CONSTRAINT `attendance_training_id_foreign` FOREIGN KEY(`training_id`) REFERENCES `Training`(`id`);
+ALTER TABLE
+    `Test` ADD CONSTRAINT `test_player_id_foreign` FOREIGN KEY(`player_id`) REFERENCES `Player`(`id`);
+ALTER TABLE
+    `Attendance` ADD CONSTRAINT `attendance_training_id_foreign` FOREIGN KEY(`training_id`) REFERENCES `Player`(`id`);
