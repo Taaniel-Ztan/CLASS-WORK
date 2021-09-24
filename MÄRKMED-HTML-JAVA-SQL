@@ -156,6 +156,61 @@ YOUTUBE TUTOURIAL https://www.youtube.com/watch?v=PlxWf493en4
 03.09.2021
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+"ARRAY" CRUD - Create ; Read ; Update ;Delete
+
+["test",2,3,null]
+console.log([]);
+let list = []
+Read
+
+Online OCR - png to txt converter
+
+//READ//
+
+//Method 1//
+
+list.filter(elem => elem > 0 ) // 2,3
+
+//Method 2//
+
+list[0] // "test"
+list[1] // 2
+list[2] // 3
+list[3] // null
+list[4] // undefined
+fruits.indexOf("pear") // -1
+fruits.indexOf("pear") // false
+list.filter(elem => elem > 0 )
+
+
+let fruits = ["pineapple","pear","watermelon"]
+fruits.indexOf("pineapple") - kirjutades konsooli siis see annab "1" vastuse kuna see on array-s esimene []..
+fruits.includes("pineapple") - sisaldab midagi
+
+//update//
+
+fruits[4] = "watermelon" - võtab 4-nda array ja asendab selle watermelon-ga
+fruits.splice(2,0,"plum") - lisab plum elemendi keskele
+
+//delete//
+fruits.pop() - võtab viimase elemendi välja ning kustutab selle ja esitab selle mille ta kustutas..
+
+fruits.splice(2,1,"carrot") - kustutab elemendi plum 
+"2"- mitmenda koha ta võiks kustudada
+"1"- mitu elementi ta võiks kustudada"
+"carrot" - asendab selle "plumm-i".
+"0" - lükkab edasi järgmisele kohale.
+
+array eesti keeles = list, massiv, nimekiri, array.
+
+list.length // mitu elementi listis on
+//viimane element
+list //undefined
+//eelviimane element
+
+
+https://www.w3schools.com/ - Interneti manuaal koodimisele
+
 
 
 
