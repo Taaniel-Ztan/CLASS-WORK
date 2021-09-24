@@ -211,11 +211,36 @@ list //undefined
 
 https://www.w3schools.com/ - Interneti manuaal koodimisele
 
+//html ja java//
+
+    //DOM CRUD // Create // Read
+        docment.querySelector(".red")
+        document.querySelectorAll(".red")
+        // Update
+       element.className = "green"
 
 
 
+internetis teksti tegemine
+
+document.body.append(document.createElement("li))
+VASTUS: UNDEFINED - tekib neti ainult "marker" 
+
+TEKSTIGa
+<script>
 
 
+let li = document.createElement("li")
+li.append(offers[0][0])
+li.append(offers[1][0])
+li.append(offers[2][0])
+document.body.append(li)
+<script>
 
+
+console.log(offers[0][0]
+console.log(offers[1][0]
+console.log(offers[0][1]
+console.log(offers[1][1]
 
 
