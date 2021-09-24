@@ -208,4 +208,88 @@ Katlal on kolm temperatuurivahemikku
 17.09.2021
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+///MANUAALNE VERSIOON///
+
+const offers=[["Crossroad Gardens","88"],["Strawberry Mountain Lands","57"],["Weeping Willow Acres","39"],["Pinewood Meadow","05"],["Broken Cart Orchard","31"],["Rattlesnake Ranch","47"],["Shadow Ridge Vineyard","96"],["Peach Tree Range","50"],["Elysian Orchard","19"],["Crown Meadow Fields","63"],["Mooseridge Meadow","40"],["Eastwood Orchard","90"],["Poison Ivy Gardens","48"],["Crescent Canyon Ranch","36"],["Cranberry Estate","41"],["Lone Pine Farm","49"],["Whispering Willow Range","82"],["Spring Blossom Ranch","66"],["Hollow Point Estate","27"],["Little Acorn Meadow","20"],["New Morning Pastures","79"],["Oak Wood Ranch","53"],["Crescent Canyon Orchard","56"],["Grassy Knoll Fields","07"],["Moonlight Gardens","73"],["Lucky Paws Estate","08"],["Crooked Creek Nursery","21"],["Small World Pastures","51"],["Crooked Creek Acres","45"],["Red Mountain Farmstead","78"],["Blueberry Basket Farms","60"],["Maple Springs Acres","54"],["Lucky Paws Farmstead","84"],["Wild Horse Pastures","55"]];
+
+console.log(offers[0][0])
+console.log(offers[0][1])
+console.log(offers[1][0])
+console.log(offers[1][1])
+console.log(offers[2][0])
+console.log(offers[2][1])
+console.log(offers[3][0])
+console.log(offers[3][1])
+console.log(offers[4][0])
+console.log(offers[4][1])
+console.log(offers[5][0])
+console.log(offers[5][1])
+console.log(offers[6][0])
+console.log(offers[6][1])
+console.log(offers[7][0])
+console.log(offers[7][1])
+console.log(offers[8][0])
+console.log(offers[8][1])
+console.log(offers[9][0])
+console.log(offers[9][1])
+console.log(offers[10][0])
+console.log(offers[10][1])
+console.log(offers[11][0])
+console.log(offers[11][1])
+console.log(offers[12][0])
+console.log(offers[12][1])
+console.log(offers[13][0])
+console.log(offers[13][1])
+console.log(offers[14][0])
+console.log(offers[14][1])
+console.log(offers[15][0])
+console.log(offers[15][1])
+console.log(offers[16][0])
+console.log(offers[16][1])
+console.log(offers[17][0])
+console.log(offers[17][1])
+console.log(offers[18][0])
+console.log(offers[18][1])
+console.log(offers[19][0])
+console.log(offers[19][1])
+console.log(offers[20][0])
+console.log(offers[20][1])
+console.log(offers[21][0])
+console.log(offers[21][1])
+console.log(offers[22][0])
+console.log(offers[22][1])
+console.log(offers[23][0])
+console.log(offers[23][1])
+console.log(offers[24][0])
+console.log(offers[24][0])
+console.log(offers[24][1])
+console.log(offers[25][0])
+console.log(offers[25][1])
+console.log(offers[26][0])
+console.log(offers[26][1])
+console.log(offers[27][0])
+console.log(offers[27][1])
+console.log(offers[28][0])
+console.log(offers[28][1])
+console.log(offers[29][0])
+console.log(offers[30][0])
+console.log(offers[30][1])
+console.log(offers[31][0])
+console.log(offers[31][1])
+console.log(offers[32][0])
+console.log(offers[32][1])
+console.log(offers[33][0])
+console.log(offers[33][1])
+
+///AUTOMAATNE VERSIOON//
+
+const offers=[["Crossroad Gardens","88"],["Strawberry Mountain Lands","57"],["Weeping Willow Acres","39"],["Pinewood Meadow","05"],["Broken Cart Orchard","31"],["Rattlesnake Ranch","47"],["Shadow Ridge Vineyard","96"],["Peach Tree Range","50"],["Elysian Orchard","19"],["Crown Meadow Fields","63"],["Mooseridge Meadow","40"],["Eastwood Orchard","90"],["Poison Ivy Gardens","48"],["Crescent Canyon Ranch","36"],["Cranberry Estate","41"],["Lone Pine Farm","49"],["Whispering Willow Range","82"],["Spring Blossom Ranch","66"],["Hollow Point Estate","27"],["Little Acorn Meadow","20"],["New Morning Pastures","79"],["Oak Wood Ranch","53"],["Crescent Canyon Orchard","56"],["Grassy Knoll Fields","07"],["Moonlight Gardens","73"],["Lucky Paws Estate","08"],["Crooked Creek Nursery","21"],["Small World Pastures","51"],["Crooked Creek Acres","45"],["Red Mountain Farmstead","78"],["Blueberry Basket Farms","60"],["Maple Springs Acres","54"],["Lucky Paws Farmstead","84"],["Wild Horse Pastures","55"]];
+for (let i =0; i <= offers.length-1; i++) {
+    console.log(offers[i])
+    let li= document.createElement("Li")
+    li.textContent = offers[i]
+    document.body.append(li)
+}
                                 
