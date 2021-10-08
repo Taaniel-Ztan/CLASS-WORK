@@ -343,4 +343,104 @@ Katlal on kolm temperatuurivahemikku
 17.09.2021
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+04.10.2021 - 08.10.2021
 
+Demo kuidas JavaScripti abil lisada mängija MySQL tabelisse
+
+const http = require('http');
+const url = require('url');
+const mysql = require('mysql'); 
+
+let con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "Passw0rd",
+    database: "fctimo"
+  });
+
+const requestListener = function (req, res) {
+    console.log(req.url)
+    var urlData = url.parse(req.url, true);
+
+    if (urlData.pathname == "/players") {
+        let sql = "SELECT * FROM players;"
+        let html = "";
+        let form = '<form action="/players/save" method="GET">'
+        form += '<input name="name" />'
+        form += '<button>Add player</button>'
+        form += '</form>'
+        con.query(sql, function (err, result) {
+            if (err) html += err;
+            for(let i=0; i<result.length; i++)
+                html += '<li>'+result[i].name+'</li>'
+
+            res.writeHead(200);
+            res.end('<html><body>'+form+'<h2>Players</h2>'+html+'</body></html>', { 'Content-Type': 'text/html' });
+        });
+        return;
+    }
+
+    if (urlData.pathname == "/players/save" && urlData.query.name) {
+        let escapedData = urlData.query.name.replace("'","''")
+        let sql = "INSERT INTO players (name) VALUES ('"+escapedData +"');"
+        con.query(sql, function (err, result) {
+            if (err) throw err;
+            console.log("1 record inserted");
+            res.writeHead(302, {
+                'Location': '/players'
+            });
+            res.end();
+        });
+        return;
+    }
+
+    res.writeHead(302, {
+        'Location': '/players'
+    });
+    res.end();
+}
+
+con.connect(function(err) {
+if (err) throw err;
+    console.log("Connected to database!");
+    const server = http.createServer(requestListener);
+    server.listen(8080);
+});
+
+
+Seda teeme reedel tunnis, panin juba varem siia et Aleksander ja teised kes pole kohal saaks juba uudistada.
+
+Kirjuta numbri ära arvamise programm näiteks browseri konsoolis.
+Las arvuti valib ühe numbri vahemikus 1-10 ja jätab selle meelde. Seejärel küsib kasutajalt ühte numbrit kasutades käsklust prompt.
+prompt("Sisesta üks number 1-10-ni")
+Seejärel kontrolli kas kasutaja sisestatud number on sama mille arvuti valis.
+Kui arvud on samad kirjuta konsooli: "Yay! Arvasid õige numbri ära!"
+Kui arvud ei ole samad kirjuta konsooli: "Sorry, X ei ole õige number." kus X asemel on kasutaja sisestatud number.
+
+Hinde 4 saamiseks tee veel üks lisaülesanne.
+Hinde 5 saamiseks tee mõlemad lisaülesanded.
+
+Lisaülesanded:
+    1. Kui sisestatud arv on 1 võrra suurem või väiksem kirjutaks konsooli "Ai, sa pakkusid väga lähedale."
+Näiteks arvuti valitud number on 8 ja kasutaja pakkus 7 või 9.
+    2. Kasutaja saaks arvu pakkuda 3 korda, enne kui arvuti uue numbri valib.
+
+Abiks:
+    1. Generate random number between two numbers in JavaScript https://stackoverflow.com/a/4960020
+    2. Function prompt() https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt
+    3. Password check with prompt https://discord.com/channels/882575237047267338/882576569284055081/895908459273408512 (edited)
+
+
+
+
+
+Password check with prompt
+password = prompt("Sisesta parool")
+while (password != "qwe123")
+{
+    alert("Vale parool")
+    password = prompt("Sisesta parool")
+    if (password == null)
+        break
+}
+console.log("said sisse")
