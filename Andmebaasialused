@@ -112,4 +112,29 @@ const server = http.createServer(requestListener);
 server.listen(80);
 
 
+FC_TIMO
+
+SELECT weight, name, price, ROUND(price/(weight/1000), 2) AS price_per_kg FROM products ORDER BY price_per_kg
+
+INSERT INTO Parent (firstName, LastName) VALUES ('Matt','Garner'), ('Alexis','Garner'), ('Kati','Ayers'), ('Kalle','Ayers'), ('Bob','Zamora'), ('Lana','Zamora'), ('Dirk','Burgess'), ('Natalja','Nunez'), ('Kevin','Stark');
+INSERT INTO PlayerParent (player_id, parent_id) VALUES ('1','1'), ('1','2'), ('2','3'), ('2','4'), ('3','5'), ('3','6'), ('4','7'), ('5','8'), ('6','9');
+
+SELECT
+  name,
+  weight,
+  price,
+  weight,
+  CAST(
+    ROUND(CAST(price /(weight / 1000) AS NUMERIC), 2) AS DOUBLE PRECISION
+  ) AS price_per_kg
+FROM products
+ORDER BY
+  price_per_kg ASC,
+  name ASC
+  
+  
+  SELECT LastName, name, PlayerParent.parent_id, Parent.first_name, Parent.last_name 
+  FROM PlayerParent 
+  LEFT JOIN Player ON Player.id = PlayerParent.player_id 
+  LEFT JOIN Parent ON Parent.id = PlayerParent.parent_id
 
