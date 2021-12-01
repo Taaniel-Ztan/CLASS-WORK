@@ -138,6 +138,9 @@ ORDER BY
   LEFT JOIN Player ON Player.id = PlayerParent.player_id 
   
   SELECT weight, name, price, ROUND(price/(weight/1000), 2) AS price_per_kg FROM products ORDER BY price_per_kg
+  
+  SELECT *, ROUND(weight/1000*price, 2) AS price_per_kg FROM `products`
+  ORDER BY price_per_kg ASC
 
 
 
