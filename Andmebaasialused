@@ -136,5 +136,9 @@ ORDER BY
   SELECT LastName, name, PlayerParent.parent_id, Parent.first_name, Parent.last_name 
   FROM PlayerParent 
   LEFT JOIN Player ON Player.id = PlayerParent.player_id 
-  LEFT JOIN Parent ON Parent.id = PlayerParent.parent_id
+  
+  SELECT weight, name, price, ROUND(price/(weight/1000), 2) AS price_per_kg FROM products ORDER BY price_per_kg
+
+
+
 
